@@ -10,7 +10,10 @@ let win = null;
 app.on('ready', function () {
 
   // Initialize the window to our specified dimensions
-  win = new BrowserWindow({width: 1000, height: 600});
+  win = new BrowserWindow({width: 800, height: 600, frame: false});
+
+  // Remove the top menu
+  //win.setMenu(null);
 
   // Specify entry point
   if (process.env.PACKAGE === 'true'){
@@ -46,3 +49,6 @@ app.on('window-all-closed', function () {
     app.quit();
   }
 });
+
+// In this file you can include the rest of your app's specific main process
+// code. You can also put them in separate files and require them here.
